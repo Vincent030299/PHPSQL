@@ -7,6 +7,7 @@
 	<link rel="stylesheet" href="css/bootstrap-theme.css">
 	<link rel="stylesheet" href="css/bootstrap-theme.min.css">
 	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/styles.css">
 
 	<!-- javascript bootstrap -->
 	<script type="text/javascript" href="js/bootstrap.js"></script>
@@ -19,21 +20,37 @@
 	<link rel="stylesheet" href="fonts/glyphicons-halflings-regular.ttf">
 </head>
 <body>
+		<nav class="navbar navbar-inverse navbar-fixed-top">
+  			<div class="container-fluid">
+   			 <div class="navbar-header">
+      			<a class="navbar-brand" href="index.php">Home</a>
+    				</div>
+    			<ul class="nav navbar-nav">
+      				<li class="active"><a href="index.php">Home</a></li>
+    			</ul>
+  			</div>
+		</nav>
 
-		<form action="result.php" method="post">
+		<form class="form-horizontal" action="result.php" method="post">
 
-			<legend>Lenen</legend>
-			<label>Begin bedrag</label>
-			<input type="tekst" name="begin"><br/ >
+			<legend id ="lenen">Lenen</legend>
 
-			<label>Rente</label>
-			<input type="tekst" name="rente"><br/>
+			<div class="form-group">
+				<label class="breedte">Begin bedrag</label>
+				<input type="tekst" name="begin" id="marge"><br/ >
+			</div>
+			
+			<div class="form-group">	
+				<label class="breedte">Rente</label>
+					<input type="tekst" name="rente" id="marge1"><br/>
+			</div>
+			
+			<div class="form-group">		
+				<label class="breedte">Aantal jaren</label>
+					<input type="tekst" name="jaren" id="marge2"><br/>
+			</div>		
 
-			<label>Aantal jaren</label>
-			<input type="tekst" name="jaren"><br/>
-
-
-			<input type="submit">
+			<input type="submit" id="submit">
 		</form>
 </body>
 </html>

@@ -7,6 +7,7 @@
 	<link rel="stylesheet" href="css/bootstrap-theme.css">
 	<link rel="stylesheet" href="css/bootstrap-theme.min.css">
 	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/styles.css">
 
 	<!-- javascript bootstrap -->
 	<script type="text/javascript" href="js/bootstrap.js"></script>
@@ -19,19 +20,33 @@
 	<link rel="stylesheet" href="fonts/glyphicons-halflings-regular.ttf">
 </head>
 <body>
+		<nav class="navbar navbar-inverse navbar-fixed-top">
+  			<div class="container-fluid">
+   			 <div class="navbar-header">
+      			<a class="navbar-brand" href="index.php">Home</a>
+    				</div>
+    			<ul class="nav navbar-nav">
+      				<li class="active"><a href="index.php">Home</a></li>
+    			</ul>
+  			</div>
+		</nav>
+		<form class="form-horizontal">
 
-		<form>
+			<legend id="lenen">Lenen</legend>
+				<div class="form-group">
+					<label class="breedte">Begin bedrag</label>
+						<input type="tekst" name="begin" id="marge3" disabled value=<?php echo '"' . $_POST['begin'] . '"'; ?>><br/ >
+				</div>
 
-			<legend>Lenen</legend>
-			<label>Begin bedrag</label>
-			<input type="tekst" name="begin" disabled value=<?php echo '"' . $_POST['begin'] . '"'; ?>><br/ >
-
-			<label>Rente</label>
-			<input type="tekst" name="rente" disabled value=<?php echo '"' . $_POST['rente'] . '"'; ?>><br/>
-
-			<label>Aantal jaren</label>
-			<input type="tekst" name="jaren" disabled value=<?php echo '"' . $_POST['jaren'] . '"'; ?>><br/>
-
+				<div class="form-group">				
+					<label class="breedte">Rente</label>
+						<input type="tekst" name="rente" id="marge4" disabled value=<?php echo '"' . $_POST['rente'] . '"'; ?>><br/>
+				</div>
+				
+				<div class="form-group">						
+					<label class="breedte">Aantal jaren</label>
+						<input type="tekst" name="jaren" id="marge5" disabled value=<?php echo '"' . $_POST['jaren'] . '"'; ?>><br/>
+				</div>		
 		</form>
 		<ol>
 		<?php
