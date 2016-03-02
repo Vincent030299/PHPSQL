@@ -20,20 +20,25 @@
 </head>
 <body>
 
-		<form action="result.php" method="post">
+		<form>
 
 			<legend>Lenen</legend>
 			<label>Begin bedrag</label>
-			<input type="tekst" name="begin"><br/ >
+			<input type="tekst" name="begin" disabled value=<?php echo '"' . $_POST['begin'] . '"'; ?>><br/ >
 
 			<label>Rente</label>
-			<input type="tekst" name="rente"><br/>
+			<input type="tekst" name="rente" disabled value=<?php echo '"' . $_POST['rente'] . '"'; ?>><br/>
 
 			<label>Aantal jaren</label>
-			<input type="tekst" name="jaren"><br/>
+			<input type="tekst" name="jaren" disabled value=<?php echo '"' . $_POST['jaren'] . '"'; ?>><br/>
 
-
-			<input type="submit">
 		</form>
+		<ol>
+		<?php
+			for($x = 1; $x < $_POST['jaren']+1; $x++){
+				echo " <li>e jaar: " . $_POST['begin'] += $_POST['begin']*($_POST['rente']/100) . ";</li>";
+			}
+		?>
+		</ol>
 </body>
 </html>
